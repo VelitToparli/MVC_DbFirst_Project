@@ -1,0 +1,31 @@
+﻿@model List<MVC_DbFirst_Project.Models.TblPassenger>
+
+
+@{
+    ViewBag.Title = "PassengerList";
+    Layout = "~/Views/Shared/Layout2.cshtml";
+}
+
+<h2>Yolcu Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Yaş</th>
+        <th>Cinsiyet</th>
+    </tr>
+
+     @foreach (var item in Model)
+     {
+         <tr>
+             <td>@item.PassengerID</td>
+             <td>@item.PassengerName</td>
+             <td>@item.PassengerSurname</td>
+             <td>@item.PassengerAge</td>
+             <td>@item.PassengerGender</td>
+         </tr>
+     }
+
+</table>

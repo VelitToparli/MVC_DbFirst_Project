@@ -1,0 +1,26 @@
+﻿@using MVC_DbFirst_Project.Models;
+@model List<TblCity>
+
+@{
+    ViewBag.Title = "CityList";
+    Layout = "~/Views/Shared/Layout2.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Şehir İsmi</th>
+        <th>Ülke</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CityID</td>
+            <td>@item.CityName</td>
+            <td>@item.CityCountry</td>
+        </tr>
+    }
+
+</table>
